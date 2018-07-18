@@ -4,7 +4,7 @@
 * Kotlin 1.2.51
 
 ## Bug?
-When the size of MotionLayout changes, it will not be the same animation.
+MotionLayout animation behavior is different when using wrap_content or match_parent.
 
 * Use wrap_content  
 ![use_wrap_content.gif](/screens/use_wrap_content.gif)
