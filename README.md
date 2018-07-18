@@ -4,7 +4,7 @@
 * Kotlin 1.2.51
 
 ## Bug?
-MotionLayout animation behavior is different when using wrap_content or match_parent.
+The MotionLayout animation behaves differently when its parent View uses "wrap_content" or "match_parent".
 
 * Use wrap_content  
 ![use_wrap_content.gif](/screens/use_wrap_content.gif)
