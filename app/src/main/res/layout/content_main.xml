@@ -24,7 +24,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <!--FIXME 下のようにしたらアニメーションが変わる-->
+    <!--FIXME Not same animation when use this code-->
     <!--<com.numero.editor_tools_example.EditorToolsView-->
         <!--android:layout_width="0dp"-->
         <!--android:layout_height="0dp"-->
