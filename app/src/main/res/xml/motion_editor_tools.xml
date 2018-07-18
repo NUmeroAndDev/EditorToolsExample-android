@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:motion="http://schemas.android.com/apk/res-auto">
+
+    <ConstraintSet android:id="@+id/start">
+
+        <Constraint
+            android:id="@id/droid1ImageButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:alpha="0"
+            android:visibility="invisible"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintTop_toTopOf="@+id/guideImageButton" />
+
+        <Constraint
+            android:id="@id/droid2ImageButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:alpha="0"
+            android:visibility="invisible"
+            motion:layout_constraintStart_toEndOf="@+id/droid1ImageButton"
+            motion:layout_constraintTop_toTopOf="@+id/droid1ImageButton" />
+
+        <Constraint
+            android:id="@id/guideImageButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:rotation="-180"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintStart_toStartOf="parent" />
+
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/end">
+
+        <Constraint
+            android:id="@id/droid1ImageButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:alpha="1"
+            android:visibility="visible"
+            motion:layout_constraintBottom_toTopOf="@+id/guideImageButton"
+            motion:layout_constraintStart_toStartOf="parent" />
+
+        <Constraint
+            android:id="@id/droid2ImageButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:alpha="1"
+            android:visibility="visible"
+            motion:layout_constraintStart_toEndOf="@+id/droid1ImageButton"
+            motion:layout_constraintTop_toTopOf="@+id/droid1ImageButton" />
+
+        <Constraint
+            android:id="@id/guideImageButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:rotation="0"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintStart_toStartOf="parent" />
+    </ConstraintSet>
+
+    <Transition
+        motion:constraintSetEnd="@+id/end"
+        motion:constraintSetStart="@+id/start"
+        motion:duration="250">
+
+    </Transition>
+</MotionScene>
